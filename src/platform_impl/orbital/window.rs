@@ -80,7 +80,7 @@ impl Window {
             window::WindowLevel::AlwaysOnBottom => {
                 flag_str.push(ORBITAL_FLAG_BACK);
             },
-            window::WindowLevel::Normal => {},
+            window::WindowLevel::Normal | window::WindowLevel::Floating => {},
             window::WindowLevel::AlwaysOnTop => {
                 flag_str.push(ORBITAL_FLAG_FRONT);
             },
@@ -336,7 +336,7 @@ impl Window {
             window::WindowLevel::AlwaysOnBottom => {
                 let _ = self.set_flag(ORBITAL_FLAG_BACK, true);
             },
-            window::WindowLevel::Normal => {
+            window::WindowLevel::Normal | window::WindowLevel::Floating => {
                 let _ = self.set_flag(ORBITAL_FLAG_BACK, false);
                 let _ = self.set_flag(ORBITAL_FLAG_FRONT, false);
             },

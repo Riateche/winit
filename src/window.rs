@@ -1816,6 +1816,8 @@ pub enum WindowLevel {
 
     /// The window will always be on top of normal windows.
     AlwaysOnTop,
+
+    Floating,
 }
 
 /// Generic IME purposes for use in [`Window::set_ime_purpose`].
